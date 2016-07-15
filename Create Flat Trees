@@ -1,0 +1,71 @@
+var tree = function(x,y,num,f) {
+   
+    if(num === 1) {
+            noStroke();
+    fill(f);
+    ellipse(x,y,50,50);   
+    fill(0,0,0,50);
+    arc(x,y,50,50,270,450);
+    stroke(69);
+    strokeWeight(7);
+    strokeCap(SQUARE);
+    line(x,y+25,x,y+65);    
+    }
+    if(num === 2) {
+        noStroke();
+    fill(f);
+    rectMode(CORNER);
+    rect(x-15,y-45,30,90,8);
+    fill(0,0,0,50);
+    (rect)(x,y-45,15,90,0,20,20,0);
+     stroke(69);
+    strokeWeight(7);
+    strokeCap(SQUARE);
+    line(x,y+45,x,y+65);   
+    }
+    if(num === 3) {
+         noStroke();
+    fill(f);
+    triangle(x-20,y+50,x+20,y+50,x,y-50);
+    fill(0,0,0,50);
+    triangle(x,y+50,x+20,y+50,x,y-50);
+        stroke(69);
+    strokeWeight(7);
+    strokeCap(SQUARE);
+    line(x,y+50,x,y+65);   
+    }
+    if(num === 4) {
+                   noStroke();
+    fill(f);
+    ellipse(x,y,70,50);   
+    fill(0,0,0,50);
+    arc(x,y,70,50,270,450);
+    stroke(69);
+    strokeWeight(7);
+    strokeCap(SQUARE);
+    line(x,y+25,x,y+65);        
+    }
+    if(num === 5) {
+          stroke(69);
+    strokeWeight(7);
+    strokeCap(SQUARE);
+    line(x,y+25,x,y+65);   
+    strokeWeight(4);
+    line(x,y+44,x-34,y+10);
+    line(x,y+37,x+36,y+9);
+    noStroke();
+    fill(f);
+    ellipse(x,y,50,50);   
+    fill(0,0,0,50);
+    arc(x,y,50,50,270,450);
+    fill(f);
+    ellipse(x-25,y+10,30,30);
+    fill(0,0,0,50);
+    arc(x-25,y+10,30,30,270,450);
+      fill(f);
+    ellipse(x+25,y+10,30,30);
+    fill(0,0,0,50);
+    arc(x+25,y+10,30,30,270,450);
+           
+    }
+};
