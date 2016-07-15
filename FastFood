@@ -1,0 +1,150 @@
+var burger = function(x,y,size) {
+    pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();
+    rectMode(CENTER);
+    fill(255, 204, 0);
+        rect(x,y+50,155,155-135);
+    fill(150, 65, 0);
+    rect(x,y+35,155,155-143);
+    fill(255, 153, 0);
+    rect(x,y+25,155,155-145);
+        fill(150, 65, 0);
+    rect(x,y+15,155,155-143);
+        fill(255, 204, 0);
+
+    arc(x,y+9,155,-155+10,0,180);
+    
+    fill(255,255,255,130);
+    ellipse(x-9,y-50,155-140,155-150);
+    ellipse(x+17,y-44,155-148,155-147);
+    ellipse(x-19,y-44,155-148,155-152);
+    fill(0,0,0,20);
+     arc(x,y+9,155,-155+10,90,180);
+     rect(x-38,y+34,155-75,155-105);
+popMatrix();
+    
+};
+
+var fries = function(x,y,size) {
+    pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();
+    
+       
+    pushMatrix();
+    rectMode(CENTER);
+    fill(207, 151, 11);
+      rotate(-3);
+    
+    rect(x+13,y+1,18,102);
+    rect(x+33,y+13,18,102);
+    rotate(3);
+     rect(x+76,y+0,18,84);
+    rotate(3);
+    rect(x+54,y+-10,18,102);
+    rotate(-3);
+    fill(255, 183, 0);
+    rect(x+19,y+10,18,102);
+    rect(x+38,y+27,18,102);
+     rect(x+80,y+13,18,84);
+    rotate(3);
+    rect(x+61,y+4,18,102);
+    popMatrix();
+    
+    fill(255, 76, 106);
+  
+    quad(x,y,x+15,y+95,x+85,y+95,x+100,y);
+    fill(0,0,0,30);
+    quad(x+50,y,x+50,y+95,x+85,y+95,x+100,y);
+ 
+    
+    popMatrix();
+};
+
+var drink = function(x,y,size) {
+        pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();
+        fill(194, 194, 194);
+    rect(x+50,y,10,56);
+    fill(255, 128, 31);
+     quad(x,y,x+15,y+140,x+85,y+140,x+100,y);
+    fill(220);
+    rectMode(CENTER);
+    rect(x+50,y,110,12);
+    fill(230, 230, 230);
+    quad(x+4,y+40,x+8,y+81,x+90,y+105,x+94,y+61);
+    fill(0,0,0,50);
+    quad(x+50,y+6,x+50,y+140,x+85,y+140,x+100,y+6);
+
+    popMatrix();
+};
+
+var ketchup = function(x,y,size) {
+            pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();  
+    fill(255, 0, 0);
+    (rect)(x,y,70,150,0,0,20,20);
+         fill(0,0,0,50);
+     (rect)(x+16,y,35,150,0,0,20,0);
+    fill(225,0,0);
+    rect(x,y-79,60,10);
+
+     quad(x-5,y-115,x-10,y-83,x+10,y-83,x+5,y-115);
+     fill(255,0,0);
+     rect(x-19,y-78,7,10);
+
+    popMatrix();
+    
+    
+};
+
+var mustard = function(x,y,size) {
+                pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();  
+    fill(255, 196, 0);
+    (rect)(x,y,70,150,0,0,20,20);
+         fill(0,0,0,50);
+     (rect)(x+16,y,35,150,0,0,20,0);
+    fill(222, 170, 0);
+    rect(x,y-79,60,10);
+
+     quad(x-5,y-115,x-10,y-83,x+10,y-83,x+5,y-115);
+     fill(255, 196, 0);
+     rect(x-19,y-79,7,10);
+
+    popMatrix();    
+};
+
+var bbq = function(x,y,size) {
+                    pushMatrix();
+    translate(x,y);
+    scale(size);
+    noStroke();  
+    fill(255, 106, 0);
+    (rect)(x,y,70,150,0,0,20,20);
+         fill(0,0,0,50);
+     (rect)(x+16,y,35,150,0,0,20,0);
+    fill(230, 92, 0);
+    rect(x,y-79,60,10);
+
+     quad(x-5,y-115,x-10,y-83,x+10,y-83,x+5,y-115);
+     fill(255, 106, 0);
+     rect(x-19,y-79,7,10);
+     fill(255);
+     textFont(createFont("Trebuchet MS Bold"));
+     textSize(28);
+     text("BBQ",x-25,y);
+     
+
+    popMatrix();       
+    
+};
