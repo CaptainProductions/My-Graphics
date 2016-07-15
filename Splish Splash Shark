@@ -1,0 +1,68 @@
+var sharkLeft = function(x,y,size) {
+    rectMode(CENTER);
+
+    
+ stroke(0);
+ strokeWeight(size/20);
+ fill(56, 114, 173);
+ (rect)(x,y,size,size,size/10,size/10,0,0);
+ noStroke();
+
+ rect(x,y,size-size/7.5,size/4.2);
+ noStroke();
+ fill(37, 86, 135);
+ (rect)(x,y+size/3.6,size-size/16.8,size/2.3,size/15,size/15,0,0);
+ 
+
+ 
+
+
+ fill(56, 114, 173);
+ strokeWeight(size/20);
+ stroke(0);
+ triangle(x+size/4.1,y-size/1.4,x-size/4.9,y-size/3.6,x+size/4.0,y-size/3.6);
+ 
+ triangle(x+size/2,y,x+size/2,y+size/3,x+size,y);
+ noStroke();
+ rect(x,y-size/6.5,size/1.7,size/2.7);
+ 
+ fill(0,255,0);
+ rect(x-size/3.4,y+size/3.6,size/10,size/10);
+    
+    
+    
+};
+var sharkRight = function(x,y,size) {
+    rectMode(CENTER);
+
+    
+ stroke(0);
+ strokeWeight(size/20);
+ fill(56, 114, 173);
+ (rect)(x,y,size,size,size/10,size/10,0,0);
+ noStroke();
+
+ rect(x,y,size-size/7.5,size/4.2);
+ noStroke();
+ fill(37, 86, 135);
+ (rect)(x,y+size/3.6,size-size/16.8,size/2.3,size/15,size/15,0,0);
+ 
+
+ 
+
+
+ fill(56, 114, 173);
+ strokeWeight(size/20);
+ stroke(0);
+ triangle(x-size/4.1,y-size/1.4,x-size/4.9,y-size/3.6,x+size/4.0,y-size/3.6);
+ 
+ triangle(x-size/2,y,x-size/2,y+size/3,x-size,y);
+ noStroke();
+ rect(x,y-size/6.5,size/1.7,size/2.7);
+ 
+ fill(0,255,0);
+ rect(x+size/3.4,y+size/3.6,size/10,size/10);
+    
+    
+    
+};
