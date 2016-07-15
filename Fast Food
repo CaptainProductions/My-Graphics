@@ -148,3 +148,73 @@ var bbq = function(x,y,size) {
     popMatrix();       
     
 };
+
+
+var patty = function(x,y, size) {
+    pushMatrix();
+    translate(x, y);
+    scale(size);
+  noStroke();
+  fill(92, 64, 64);
+  
+  fill(145, 63, 0);
+  ellipse(0,0,130,130);
+    fill(0, 0, 0, 120);
+    pushMatrix();
+    translate(-17, 11);
+        rotate(12);
+    ellipse(+-15,-16,5,90);
+    ellipse(+-26,-16,5,71);
+    ellipse(+20,-16,5,108);
+    ellipse(+40,-16,5,71);
+    ellipse(+58,-20,5,65);
+   ellipse(+-2,-16,5,90);
+    ellipse(20,-16,108,5);
+    ellipse(30,y-36,71,5);
+    ellipse(+20,+14,80,5);
+    popMatrix();
+    rotate(18);
+    fill(0, 0, 0,50);
+    arc(0,0,130,130,0,180);
+    fill(158, 145, 82);
+    ellipse(20, -37, 7, 9);
+    ellipse(-25, -30, 9, 5);
+    ellipse(-1, 35, 4, 8);
+    ellipse(35, 11, 9, 8);
+    ellipse(6, 10, 7, 5);
+    ellipse(-5, -14, 13, 6);
+    popMatrix();
+    
+};
+var tomato = function(x,y,size) {
+        pushMatrix();
+    translate(x, y);
+    scale(size);
+    strokeWeight(7);
+    stroke(200,0,0);
+  
+  fill(250, 141, 108);
+  ellipse(0,0,130,130);
+  
+  noStroke();
+  fill(200,0,0);
+  arc(0,0,100,100,39,143);
+  arc(0,0,100,100,-84,15);
+  arc(0,0,100,100,-195,-107);
+  fill(250, 141, 108);
+  ellipse(0,0,30,30);
+  
+  fill(0,0,0,30);
+  arc(0,0,130,130,-52,135);
+  for(var i = 0; i < 400; i +=60) {
+      pushMatrix();
+    translate(0,0);
+    rotate(i);
+    fill(255, 217, 0);
+    ellipse(32,0,9,5);
+    popMatrix();
+    
+  }
+  
+  popMatrix();
+};
