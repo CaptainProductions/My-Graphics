@@ -1,0 +1,86 @@
+var circlebutton =function(x,y,sz,txt,nxt) {
+    strokeWeight(10);
+    stroke(145, 94, 5,50);
+    fill(156, 104, 0,70);
+    textFont(createFont("Chalkboard Bold"));
+    textAlign(CENTER,CENTER);
+    textSize(sz/5);
+    if(dist(mouseX, mouseY, x, y) < sz/2){
+        mouse.overButton = true;
+        fill(156, 104, 0,100);
+         ellipse(x, y+sin(frameCount*3)*5, sz, sz);
+         fill(255);
+         text(txt,x,y+sin(frameCount*3)*5);
+                 fill(0,0,0,30);
+                 noStroke();
+        arc(x,y+sin(frameCount*3)*5,sz,sz,90,270);
+          if(mouse.clicked){
+            scene =nxt;
+          }
+
+    }
+    else {
+        ellipse(x, y, sz, sz);
+        fill(255);
+        text(txt,x,y);
+        fill(0,0,0,20);
+        noStroke();
+        arc(x,y,sz,sz,90,270);
+        
+        
+    }
+    
+    
+    
+};
+
+
+
+
+var rectbutton = function(x,y,txt,after) {
+
+    textFont(createFont("Chalkboard Italic"));
+    textAlign(CENTER,CENTER);
+    strokeWeight(2);
+    stroke(0);
+    fill(255);
+    if(mouseX > x-75 && mouseX < x+75 && mouseY < y+15 && mouseY > y-15) {
+        fill(200);
+    }
+    if(mouseIsPressed && mouseX > x-75 && mouseX < x+75 && mouseY < y+15 && mouseY > y-15) {
+        scene = after;   
+    }
+    (rect)(x-75, y-15, 150, 30, 0, 100, 0, 0); 
+    fill(0);
+    triangle(x-70,y-10,x-70,y+10,x-65,y);
+    textSize(15);
+    text(txt,x,y);
+    
+};
+
+
+var arcbutton = function(x,y,size,txt,nxt) {
+        noStroke();
+    fill(255, 183, 0);
+    ellipse(x,y,size,size);
+    if(dist(x,y,mouseX,mouseY) < size/2) {
+        fill(0,0,0,30);
+        arc(x,y,size,size,270,450); 
+    }else {
+        fill(0,0,0,30);
+        arc(x,y,size,size,90,270);    
+    }
+    
+        if(mouseIsPressed && dist(x,y,mouseX,mouseY) < size/2) {
+        scene = "game";    
+    }
+    
+    fill(255);
+    textSize(30);
+    text(txt,x,y);
+  
+
+    
+};
+
+
