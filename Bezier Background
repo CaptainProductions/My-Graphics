@@ -1,0 +1,11 @@
+background(0, 118, 235);
+
+for(var k = -197+sin(frameCount*5)*7; k < 750; k += 149){
+  noStroke();
+  fill(255, 255, 255,k/8);
+  beginShape();
+  vertex(7,k);
+  bezierVertex(395,4,5,3,396,k);
+  bezierVertex(399,1,2,3,7,k);
+  endShape();
+}
