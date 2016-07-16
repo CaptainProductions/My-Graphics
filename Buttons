@@ -17,7 +17,6 @@ var circlebutton =function(x,y,sz,txt,nxt) {
           if(mouse.clicked){
             scene =nxt;
           }
-
     }
     else {
         ellipse(x, y, sz, sz);
@@ -26,19 +25,12 @@ var circlebutton =function(x,y,sz,txt,nxt) {
         fill(0,0,0,20);
         noStroke();
         arc(x,y,sz,sz,90,270);
-        
-        
+
     }
-    
-    
-    
+ 
 };
 
-
-
-
 var rectbutton = function(x,y,txt,after) {
-
     textFont(createFont("Chalkboard Italic"));
     textAlign(CENTER,CENTER);
     strokeWeight(2);
@@ -55,9 +47,7 @@ var rectbutton = function(x,y,txt,after) {
     triangle(x-70,y-10,x-70,y+10,x-65,y);
     textSize(15);
     text(txt,x,y);
-    
 };
-
 
 var arcbutton = function(x,y,size,txt,nxt) {
         noStroke();
@@ -70,17 +60,51 @@ var arcbutton = function(x,y,size,txt,nxt) {
         fill(0,0,0,30);
         arc(x,y,size,size,90,270);    
     }
-    
         if(mouseIsPressed && dist(x,y,mouseX,mouseY) < size/2) {
         scene = "game";    
     }
-    
     fill(255);
     textSize(30);
     text(txt,x,y);
-  
-
-    
 };
 
+var button = function(x,y,size,txt,nxt) {
+    textFont(createFont("Avenir Bold"));
+    textAlign(CENTER,CENTER);
+
+    if(dist(mouseX,mouseY,x,y) <size/2) {
+        mouse.overButton = true;
+        y +=3;
+        x+=3;
+        noStroke();
+    fill(0,0,0,50);
+    ellipse(x,y+size/20,size,size);
+    fill(0, 162, 255);
+    ellipse(x,y,size,size);
+    fill(255,255,255,50);
+    ellipse(x,y-size/20,size,size-size/11.0);
+    fill(255);
+    textSize(size/5);
+    text(txt,x,y);
+        if(mouse.clicked){
+        scene =nxt;
+    }
+    
+    }
+    else {
+    noStroke();
+    fill(0,0,0,50);
+    ellipse(x,y+size/20,size,size);
+    fill(0, 162, 255);
+    ellipse(x,y,size,size);
+    fill(255,255,255,50);
+    ellipse(x,y-size/20,size,size-size/11.0);
+        fill(255);
+    textSize(size/5);
+    text(txt,x,y);
+    }
+
+    
+    
+};
 
