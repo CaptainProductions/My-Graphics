@@ -10,6 +10,13 @@ var tree = function(x,y,size,shade) {
 
 };
 
+var pokey = function(x,y) {
+    stroke(0);
+    strokeWeight(2);
+    line(x-5,y+5,x,y);
+    line(x,y,x+5,y+5);
+};
+
 var sun = function(x,y,size) {
     pushMatrix();
     translate(x,y);
@@ -114,6 +121,14 @@ translate(mouseX/20,0);
     cloud(33,140);
     cloud(353,117);
     popMatrix();
+pushMatrix(); 
+translate(mouseX/50,0);
+pokey(300,339);
+pokey(249,384);
+pokey(184,324);
+pokey(135,355);
+pokey(56,333);
+popMatrix();
 };
 
 draw = function() {
@@ -124,3 +139,9 @@ draw = function() {
         }
 
 forestBg();
+
+
+
+
+
+};
